@@ -315,6 +315,17 @@ body {
 }
 
 @media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
   .nav {
     gap: 10px;
   }
@@ -322,6 +333,10 @@ body {
   .nav-link {
     padding: 6px 8px;
     font-size: 0.85rem;
+  }
+
+  .page {
+    padding: 16px 6vw 48px;
   }
 
   .section {
@@ -332,5 +347,35 @@ body {
   .intro h1,
   .hero-simple h1 {
     text-align: left;
+  }
+
+  .strategies {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .strategy {
+    align-items: flex-start;
+  }
+
+  .strategy-image {
+    width: min(320px, 92vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .strategies {
+    gap: 72px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand {
+    font-size: 1.35rem;
+  }
+
+  .logo-image {
+    width: min(480px, 94vw);
   }
 }
