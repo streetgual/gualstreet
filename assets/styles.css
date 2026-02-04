@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap");
 
 :root {
   color-scheme: light;
@@ -35,7 +35,7 @@ body {
 }
 
 .brand {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -56,7 +56,7 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 0.95rem;
 }
 
@@ -115,7 +115,7 @@ body {
 
 .intro h1,
 .hero-simple h1 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 600;
   font-size: clamp(1.6rem, 2.6vw, 2.2rem);
   letter-spacing: 0.06em;
@@ -139,7 +139,7 @@ body {
 }
 
 .section h2 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -162,7 +162,7 @@ body {
 }
 
 .strategy-title {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 1.1rem;
   display: flex;
   gap: 6px;
@@ -184,14 +184,38 @@ body {
   display: block;
 }
 
+.strategy-image--savings {
+  width: 330px;
+}
+
+.strategy-image--investments {
+  width: 360px;
+}
+
+.strategy-image--diversification {
+  width: 330px;
+}
+
 .strategy-label {
   margin-top: 6px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 0.95rem;
 }
 
+.strategy-label--savings {
+  margin-top: 22px;
+}
+
+.strategy-label--investments {
+  margin-top: 4px;
+}
+
+.strategy-label--diversification {
+  margin-top: 22px;
+}
+
 .contact-line {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
@@ -360,6 +384,11 @@ body {
 
   .strategy-image {
     width: min(320px, 92vw);
+    align-self: center;
+  }
+
+  .strategy-label {
+    align-self: center;
   }
 }
 
