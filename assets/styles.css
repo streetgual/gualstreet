@@ -85,19 +85,23 @@ body {
 }
 
 .page {
-  padding: 20px 6vw 60px;
+  padding: 20px 6vw 80px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 70px;
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: center;
-  text-align: center;
-  gap: 36px;
-  margin-top: 10px;
+  gap: 48px;
+  margin-top: 16px;
+  padding: 36px clamp(20px, 3vw, 40px);
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, rgba(47, 79, 134, 0.15), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(215, 162, 58, 0.18), transparent 45%);
+  border: 1px solid rgba(34, 34, 34, 0.08);
 }
 
 .logo-lockup {
@@ -114,13 +118,13 @@ body {
 }
 
 .intro h1,
-.hero-simple h1 {
+.hero-simple h1,
+.hero-copy h1 {
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 600;
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .divider {
@@ -133,16 +137,27 @@ body {
 .section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 18px;
 }
 
 .section h2 {
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 640px;
+}
+
+.section-head p {
+  color: var(--muted);
 }
 
 .strategies {
@@ -184,34 +199,10 @@ body {
   display: block;
 }
 
-.strategy-image--savings {
-  width: 330px;
-}
-
-.strategy-image--investments {
-  width: 360px;
-}
-
-.strategy-image--diversification {
-  width: 330px;
-}
-
 .strategy-label {
   margin-top: 6px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 0.95rem;
-}
-
-.strategy-label--savings {
-  margin-top: 22px;
-}
-
-.strategy-label--investments {
-  margin-top: 4px;
-}
-
-.strategy-label--diversification {
-  margin-top: 22px;
 }
 
 .contact-line {
@@ -226,6 +217,225 @@ body {
 
 .hero-simple {
   margin-top: 30px;
+}
+
+.hero-split {
+  align-items: stretch;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  font-family: "Oswald", Arial, sans-serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hero-lede {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(15, 35, 70, 0.2);
+}
+
+.btn.ghost {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.hero-card {
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(34, 34, 34, 0.12);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 45px rgba(14, 49, 96, 0.12);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.hero-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-label {
+  font-family: "Oswald", Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.services .service-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(180px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.service-card {
+  border: 1px solid rgba(14, 49, 96, 0.18);
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 180px;
+  box-shadow: 0 12px 28px rgba(14, 49, 96, 0.08);
+}
+
+.service-card h3 {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+.pill {
+  align-self: flex-start;
+  background: rgba(215, 162, 58, 0.15);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.brands .brand-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.brand-strip span {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #f6f7f8;
+  color: var(--navy);
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  border: 1px solid rgba(14, 49, 96, 0.18);
+  box-shadow: 0 18px 40px rgba(14, 49, 96, 0.12);
+}
+
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 520px;
+}
+
+.contact-cta {
+  align-items: stretch;
+}
+
+.contact-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 26px clamp(20px, 3vw, 36px);
+  border-radius: 20px;
+  background: linear-gradient(120deg, rgba(47, 79, 134, 0.12), rgba(215, 162, 58, 0.16));
+  border: 1px solid rgba(14, 49, 96, 0.18);
+}
+
+.contact-panel h2 {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.contact-email {
+  font-family: "Oswald", Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--navy);
+  font-weight: 600;
 }
 
 .body-text {
@@ -373,6 +583,19 @@ body {
     text-align: left;
   }
 
+  .hero {
+    padding: 26px 18px;
+  }
+
+  .contact-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-actions {
+    align-items: flex-start;
+  }
+
   .strategies {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -384,11 +607,6 @@ body {
 
   .strategy-image {
     width: min(320px, 92vw);
-    align-self: center;
-  }
-
-  .strategy-label {
-    align-self: center;
   }
 }
 
@@ -396,6 +614,10 @@ body {
   .strategies {
     gap: 72px;
     max-width: 100%;
+  }
+
+  .services .service-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
   }
 }
 
@@ -406,5 +628,9 @@ body {
 
   .logo-image {
     width: min(480px, 94vw);
+  }
+
+  .services .service-grid {
+    grid-template-columns: 1fr;
   }
 }
